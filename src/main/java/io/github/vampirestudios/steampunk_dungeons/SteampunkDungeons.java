@@ -1,5 +1,7 @@
 package io.github.vampirestudios.steampunk_dungeons;
 
+import io.github.vampirestudios.steampunk_dungeons.registry.ModBlocks;
+import io.github.vampirestudios.steampunk_dungeons.registry.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.apache.logging.log4j.Level;
@@ -16,7 +18,8 @@ public class SteampunkDungeons implements ModInitializer {
     @Override
     public void onInitialize() {
         log(Level.INFO, "Initializing");
-        //TODO: Initializer
+        ModItems.init();
+        ModBlocks.init();
     }
 
     public static void log(Level level, String message){
