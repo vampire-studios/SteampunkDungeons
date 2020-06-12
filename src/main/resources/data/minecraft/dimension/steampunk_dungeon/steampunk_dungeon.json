@@ -1,0 +1,11 @@
+{
+    "generator": {
+        "type": "steampunk_dungeons:steampunk_dungeons",
+        "custom_bool": true,
+        "biome_source": {
+            "type": "minecraft:fixed",
+            "biome": "minecraft:plains"
+        }
+    },
+    "type": "steampunk_dungeons:steampunk_dungeons_type"
+}
