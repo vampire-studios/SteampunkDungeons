@@ -1,7 +1,8 @@
 package io.github.vampirestudios.steampunk_dungeons;
 
-import io.github.vampirestudios.steampunk_dungeons.registry.ModItems;
 import io.github.vampirestudios.steampunk_dungeons.world.dimension.VoidChunkGenerator;
+import io.github.vampirestudios.steampunk_dungeons.registry.ModBlocks;
+import io.github.vampirestudios.steampunk_dungeons.registry.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
@@ -41,7 +42,8 @@ public class SteampunkDungeons implements ModInitializer {
     public void onInitialize() {
         log(Level.INFO, "Initializing");
         ModItems.init();
-
+        ModBlocks.init();
+        
         Registry.register(Registry.CHUNK_GENERATOR, new Identifier(MOD_ID, "steampunk_dungeons"), VoidChunkGenerator.CODEC);
 
         dimensionRegistryKey = RegistryKey.of(Registry.DIMENSION, new Identifier(MOD_ID, "steampunk_dungeons"));
