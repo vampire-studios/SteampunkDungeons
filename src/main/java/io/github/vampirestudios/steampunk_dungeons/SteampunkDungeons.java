@@ -33,7 +33,7 @@ public class SteampunkDungeons implements ModInitializer {
     public static final String MOD_NAME = "Steampunk Dungeons";
 
     public static final ItemGroup ITEM_GROUP = FabricItemGroupBuilder.create(new Identifier(MOD_ID, "item_group"))
-            .icon(() -> new ItemStack(Items.DIAMOND))
+            .icon(() -> new ItemStack(ModItems.DUNGEON_KEY))
             .build();
 
     private static RegistryKey<World> dimensionRegistryKey;
