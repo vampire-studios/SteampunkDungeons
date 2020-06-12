@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "steampunk_dungeons",
+  "version": "${version}",
+  "name": "Steampunk Dungeons",
+  "description": "This mod adds a lot of steampunk related stuff",
+  "authors": [
+    "OliviaTheVampire, Tridentflayer, CatCore"
+  ],
+  "contributors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/steampunk_dungeons/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "io.github.vampirestudios.steampunk_dungeons.SteampunkDungeons"
+    ],
+    "client": [],
+    "server": []
+  },
+  "mixins": [
+    "steampunk_dungeons.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.4.0",
+    "fabric": "*"
+  }
+}
