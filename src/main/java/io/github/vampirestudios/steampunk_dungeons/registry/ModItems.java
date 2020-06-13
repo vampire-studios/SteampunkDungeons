@@ -15,13 +15,7 @@ public class ModItems {
     public static Item MECHANICAL_SCRAP; //Drops from mobs, can be refined into mechanical parts
     public static Item MECHANICAL_PARTS; //Refined mechanical scrap, used to create basic gears and tools
 
-
-
-
-
-
     
-
     public static void init() {
         RegistryUtils.registerItem(new Item(new Item.Settings().group(ItemGroup.MISC)), new Identifier(SteampunkDungeons.MOD_ID, "dungeon_key"));
         RegistryUtils.registerItem(new Item(new Item.Settings().group(ItemGroup.MISC)), new Identifier(SteampunkDungeons.MOD_ID, "copper_ingot"));
