@@ -23,8 +23,10 @@ public class ModItems {
     
 
     public static void init() {
-        DUNGEON_KEY = RegistryUtils.registerItem(new Item(new Item.Settings().group(SteampunkDungeons.ITEM_GROUP)), new Identifier(SteampunkDungeons.MOD_ID, "dungeon_key"));
-
+        RegistryUtils.registerItem(new Item(new Item.Settings().group(ItemGroup.MISC)), new Identifier(SteampunkDungeons.MOD_ID, "dungeon_key"));
+        RegistryUtils.registerItem(new Item(new Item.Settings().group(ItemGroup.MISC)), new Identifier(SteampunkDungeons.MOD_ID, "copper_ingot"));
+        RegistryUtils.registerItem(new Item(new Item.Settings().group(ItemGroup.MISC)), new Identifier(SteampunkDungeons.MOD_ID, "steel_ingot"));
+        RegistryUtils.registerItem(new Item(new Item.Settings().group(ItemGroup.MISC)), new Identifier(SteampunkDungeons.MOD_ID, "copper_gear"));
     }
 
 }

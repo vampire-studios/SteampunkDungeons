@@ -24,6 +24,7 @@ repositories {
 		name = "BuildCraft"
 		url = "https://mod-buildcraft.com/maven"
 	}
+	maven{ url="https://maven.fabricmc.net" }
 }
 
 dependencies {
@@ -40,7 +41,17 @@ dependencies {
 	modImplementation 'net.earthcomputer:libstructure:1.0' // Or the latest version
 	include 'net.earthcomputer:libstructure:1.0'
 
-	modCompile "alexiil.mc.lib:libblockattributes-all:0.6.4"
+	modCompile "alexiil.mc.lib:libblockattributes-all:0.7.0-pre.21"
+
+	// For dev env testing
+	modImplementation("me.shedaniel:RoughlyEnoughItems:${project.rei_version}") {
+		exclude group: "io.github.prospector.modmenu"
+		exclude group :"net.fabricmc.fabric-api"
+	}
+
+	modImplementation ("io.github.prospector:modmenu:${project.modmenu_version}") { exclude group: "net.fabricmc.fabric-api" }
+
+	modImplementation ("io.github.cottonmc:Jankson-Fabric:2.1.0+j1.2.0") { exclude group: "net.fabricmc.fabric-api" }
 }
 
 processResources {

@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "steampunk_dungeons:block/steel_ore"
+    }
+}
