@@ -7,5 +7,5 @@
             "biome": "minecraft:plains"
         }
     },
-    "type": "steampunk_dungeons:steampunk_dungeons_type"
+    "type": "steampunk_dungeons:steampunk_dungeon_type"
 }
