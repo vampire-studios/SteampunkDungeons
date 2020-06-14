@@ -1,4 +1,4 @@
-package io.github.vampirestudios.steampunk_dungeons.world.dimension;
+package io.github.vampirestudios.steampunk_dungeons.items;
 
 
 import io.github.vampirestudios.steampunk_dungeons.SteampunkDungeons;
@@ -18,6 +18,7 @@ public class DungeonKeyItem extends Item {
 
 
     }
+
     @Override
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity entity) { //My dumbass made this the action...FUCKKK it would work if there was a food component...anyone got ideas? -Tridentflayer/Kayden
         ItemStack newStack = super.finishUsing(stack, world, entity);

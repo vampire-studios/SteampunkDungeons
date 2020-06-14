@@ -1,7 +1,7 @@
 package io.github.vampirestudios.steampunk_dungeons.registry;
 
 import io.github.vampirestudios.steampunk_dungeons.SteampunkDungeons;
-import io.github.vampirestudios.steampunk_dungeons.world.dimension.DungeonKeyItem;
+import io.github.vampirestudios.steampunk_dungeons.items.DungeonKeyItem;
 import io.github.vampirestudios.vampirelib.utils.registry.RegistryUtils;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
