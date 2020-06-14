@@ -31,12 +31,12 @@ public class SteampunkDungeons implements ModInitializer {
 
     public static final String MOD_ID = "steampunk_dungeons";
     public static final String MOD_NAME = "Steampunk Dungeons";
-
+    public static final RegistryKey<World> WORLD_DIMENSION_KEY = RegistryKey.of(Registry.DIMENSION, new Identifier(MOD_ID, "steampunk_dungeons"));
     public static final ItemGroup ITEM_GROUP = FabricItemGroupBuilder.create(new Identifier(MOD_ID, "item_group"))
             .icon(() -> new ItemStack(ModItems.DUNGEON_KEY))
             .build();
 
-    private static RegistryKey<World> dimensionRegistryKey;
+    public static RegistryKey<World> dimensionRegistryKey;
 
     @Override
     public void onInitialize() {
@@ -49,6 +49,7 @@ public class SteampunkDungeons implements ModInitializer {
         dimensionRegistryKey = RegistryKey.of(Registry.DIMENSION, new Identifier(MOD_ID, "steampunk_dungeons"));
 
         FabricDimensions.registerDefaultPlacer(dimensionRegistryKey, SteampunkDungeons::placeEntityInVoid);
+
     }
 
     public static void log(Level level, String message){
