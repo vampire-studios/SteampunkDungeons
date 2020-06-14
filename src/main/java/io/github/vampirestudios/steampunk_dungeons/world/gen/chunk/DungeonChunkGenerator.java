@@ -53,4 +53,5 @@ public class DungeonChunkGenerator extends ChunkGenerator {
     public BlockView getColumnSample(int x, int z) {
         return null;
     }
+
 }
