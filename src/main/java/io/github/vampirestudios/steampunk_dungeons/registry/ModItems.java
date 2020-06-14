@@ -15,6 +15,8 @@ public class ModItems {
     public static Item BRONZE;
     public static Item MECHANICAL_SCRAP; //Drops from mobs, can be refined into mechanical parts
     public static Item MECHANICAL_PARTS; //Refined mechanical scrap, used to create basic gears and tools
+    public static Item HALF_DAMAGED_MECHANICAL_PART; //Has 50 points in corrosion, can be fixed by tin
+    public static Item UNUSABLE_MECHANICAL_PART; //Has 100 points in corrosion, until you will not fix it by tin, it is unusable
 
 
     public static void init() {
@@ -22,7 +24,12 @@ public class ModItems {
         RegistryUtils.registerItem(new Item(new Item.Settings().group(ItemGroup.MISC)), new Identifier(SteampunkDungeons.MOD_ID, "copper_ingot"));
         RegistryUtils.registerItem(new Item(new Item.Settings().group(ItemGroup.MISC)), new Identifier(SteampunkDungeons.MOD_ID, "steel_ingot"));
         RegistryUtils.registerItem(new Item(new Item.Settings().group(ItemGroup.MISC)), new Identifier(SteampunkDungeons.MOD_ID, "copper_gear"));
-
+        HALF_DAMAGED_MECHANICAL_PART = CorrosionPointRegister.registerItem(new Item(new Item.Settings().group(ItemGroup.MISC)), new Identifier(SteampunkDungeons.MOD_ID, "half_damaged_mechanical_part"), CorrosionPoints.withCorrosionForHalf(0));
+        UNUSABLE_MECHANICAL_PART = CorrosionPointRegister.registerItem(new Item(new Item.Settings().group(ItemGroup.MISC)), new Identifier(SteampunkDungeons.MOD_ID, "unusable_mechanical_part"), CorrosionPoints.withCorrosionForFull(0));
+        MECHANICAL_PARTS = CorrosionPointRegister.registerItem(new Item(new Item.Settings().group(ItemGroup.MISC)), new Identifier(SteampunkDungeons.MOD_ID, "mechanical_part"), CorrosionPoints.withCorrosionForNone(0));
+        convertToCorroded(MECHANICAL_PARTS);
+        convertToCorroded(HALF_DAMAGED_MECHANICAL_PART);
+        convertToCorroded(UNUSABLE_MECHANICAL_PART);
     }
 
 }
