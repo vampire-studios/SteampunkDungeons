@@ -26,8 +26,11 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class SteampunkDungeons implements ModInitializer {
-
+    static MinecraftClient mc;
     public static Logger LOGGER = LogManager.getLogger();
+     public static void sendDebugMessage(String message) {
+        mc.player.sendChatMessage("STEAMPUNKDUNGEONS/" + message);
+    }
 
     public static final String MOD_ID = "steampunk_dungeons";
     public static final String MOD_NAME = "Steampunk Dungeons";
