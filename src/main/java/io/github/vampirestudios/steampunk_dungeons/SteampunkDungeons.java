@@ -9,6 +9,7 @@ import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.dimension.v1.FabricDimensions;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.pattern.BlockPattern;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -26,7 +27,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class SteampunkDungeons implements ModInitializer {
-    static MinecraftClient mc;
+    public static MinecraftClient mc;
     public static Logger LOGGER = LogManager.getLogger();
      public static void sendDebugMessage(String message) {
         mc.player.sendChatMessage("STEAMPUNKDUNGEONS/" + message);
