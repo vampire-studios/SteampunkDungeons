@@ -1,11 +1,15 @@
 package io.github.vampirestudios.steampunk_dungeons.registry;
 
 import io.github.vampirestudios.steampunk_dungeons.SteampunkDungeons;
+import io.github.vampirestudios.steampunk_dungeons.corrosion.CorrosionPointRegister;
+import io.github.vampirestudios.steampunk_dungeons.corrosion.CorrosionPoints;
 import io.github.vampirestudios.steampunk_dungeons.items.DungeonKeyItem;
 import io.github.vampirestudios.vampirelib.utils.registry.RegistryUtils;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
+
+import static io.github.vampirestudios.steampunk_dungeons.corrosion.CorrosionPointRegister.convertToCorroded;
 
 public class ModItems {
 
