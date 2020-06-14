@@ -11,7 +11,7 @@ import net.minecraft.util.Identifier;
 public class CorrosionPointRegister {
     public static Item registerItem(Item item, Identifier name, CorrosionPoints corrosionValue) {
         registerItem(item, name, corrosionValue);
-        return registerItem(item, name, corrosionValue);
+        return item;
     }
     public static void convertToCorroded(Item item) {
         convertToCorroded(ModItems.MECHANICAL_SCRAP); {
