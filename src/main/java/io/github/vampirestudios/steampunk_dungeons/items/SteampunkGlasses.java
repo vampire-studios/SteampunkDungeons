@@ -1,4 +1,4 @@
-package io.github.vampirestudios.steampunk_dungeons.customitems;
+package io.github.vampirestudios.steampunk_dungeons.items;
 import net.java.games.input.Component;
 import net.minecraft.client.Keyboard;
 import net.minecraft.entity.EquipmentSlot;
