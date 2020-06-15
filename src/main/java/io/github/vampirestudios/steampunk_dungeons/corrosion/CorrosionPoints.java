@@ -61,23 +61,12 @@ public class CorrosionPoints {
         return registerCorrosionIntForOverflowed(startCorrosionPoints + NONE);
     }
     public static CorrosionPoints withCorrosionForNone(Integer corrosion) {
-        withCorrosionForNone(corrosion); {
-            getCorrosionInHalf();
-        }
-
-        return withCorrosionForNone(corrosion);
+        return getCorrosionInHalf();
     }
     public static CorrosionPoints withCorrosionForHalf(Integer corrosion) {
-        withCorrosionForHalf(corrosion); {
-            getCorrosionInFull();
-        }
-        return withCorrosionForHalf(corrosion);
+       return getCorrosionInFull();
     }
     public static CorrosionPoints withCorrosionForFull(Integer corrosion) {
-        withCorrosionForFull(corrosion); {
-            registerCorrosionIntForOverflowed(corrosion);
-
-        }
-        return withCorrosionForFull(corrosion);
+     return getCorrosionInZero();
     }
 }
