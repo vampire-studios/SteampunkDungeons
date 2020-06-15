@@ -10,18 +10,6 @@ import net.minecraft.util.Identifier;
  */
   public static Item registerItem(Item item, Identifier name, CorrosionPoints corrosionValue) {
         RegistryUtils.registerItem(item, name);
-        if(RegistryUtils.registerItem(item, name) == null) {
-            return registerThisItem(item, name, corrosionValue);
-        }
-        try {
-            CorrosionPointRegister.registerItem(item, name, corrosionValue);
-        } catch(NullPointerException exception) {
-            throw new ExceptionInInitializerError();
-        }
-            return item;
-    }
-    public static Item registerThisItem(Item item, Identifier name, CorrosionPoints corrosionValue) {
-        RegistryUtils.registerItem(item, name);
         return item;
     }
     public static void convertToCorroded(Item item) {
