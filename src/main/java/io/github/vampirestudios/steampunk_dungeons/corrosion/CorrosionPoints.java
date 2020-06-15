@@ -28,7 +28,7 @@ public class CorrosionPoints {
         everyHour(); {
             registerCorrosionIntForOverflowed(0);
         }
-        return  getCorrosionInZero();
+        return getCorrosionInZero();
     }
     public static CorrosionPoints getCorrosionInHalf() {
         everyHour(); {
@@ -70,3 +70,4 @@ public class CorrosionPoints {
      return getCorrosionInZero();
     }
 }
+
