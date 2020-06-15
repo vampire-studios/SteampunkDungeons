@@ -8,8 +8,19 @@ import net.minecraft.util.Identifier;
 /**
  Main class for the corrosion system. In theory, it should work, but I think we should improve it and work on it.
  */
-public class CorrosionPointRegister {
-    public static Item registerItem(Item item, Identifier name, CorrosionPoints corrosionValue) {
+  public static Item registerItem(Item item, Identifier name, CorrosionPoints corrosionValue) {
+        RegistryUtils.registerItem(item, name);
+        if(RegistryUtils.registerItem(item, name) == null) {
+            return registerThisItem(item, name, corrosionValue);
+        }
+        try {
+            CorrosionPointRegister.registerItem(item, name, corrosionValue);
+        } catch(NullPointerException exception) {
+            throw new ExceptionInInitializerError();
+        }
+            return item;
+    }
+    public static Item registerThisItem(Item item, Identifier name, CorrosionPoints corrosionValue) {
         RegistryUtils.registerItem(item, name);
         return item;
     }
