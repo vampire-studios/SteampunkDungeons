@@ -5,6 +5,7 @@ import io.github.vampirestudios.steampunk_dungeons.corrosion.CorrosionPointRegis
 import io.github.vampirestudios.steampunk_dungeons.corrosion.CorrosionPoints;
 import io.github.vampirestudios.steampunk_dungeons.items.DungeonKeyItem;
 import io.github.vampirestudios.vampirelib.utils.registry.RegistryUtils;
+import io.github.vampirestudios.steampunk_dungeons.items.SteampunkGlasses;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
@@ -28,6 +29,7 @@ public class ModItems {
         RegistryUtils.registerItem(new Item(new Item.Settings().group(ItemGroup.MISC)), new Identifier(SteampunkDungeons.MOD_ID, "copper_ingot"));
         RegistryUtils.registerItem(new Item(new Item.Settings().group(ItemGroup.MISC)), new Identifier(SteampunkDungeons.MOD_ID, "steel_ingot"));
         RegistryUtils.registerItem(new Item(new Item.Settings().group(ItemGroup.MISC)), new Identifier(SteampunkDungeons.MOD_ID, "copper_gear"));
+                RegistryUtils.registerItem(new SteampunkGlasses(new Item.Settings().group(ItemGroup.MISC)), new Identifier(SteampunkDungeons.MOD_ID, "steampunk_glasses"));
         HALF_DAMAGED_MECHANICAL_PART = CorrosionPointRegister.registerItem(new Item(new Item.Settings().group(ItemGroup.MISC)), new Identifier(SteampunkDungeons.MOD_ID, "half_damaged_mechanical_part"), CorrosionPoints.withCorrosionForHalf(0));
         UNUSABLE_MECHANICAL_PART = CorrosionPointRegister.registerItem(new Item(new Item.Settings().group(ItemGroup.MISC)), new Identifier(SteampunkDungeons.MOD_ID, "unusable_mechanical_part"), CorrosionPoints.withCorrosionForFull(0));
         MECHANICAL_PARTS = CorrosionPointRegister.registerItem(new Item(new Item.Settings().group(ItemGroup.MISC)), new Identifier(SteampunkDungeons.MOD_ID, "mechanical_part"), CorrosionPoints.withCorrosionForNone(0));
